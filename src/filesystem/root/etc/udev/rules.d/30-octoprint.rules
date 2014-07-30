@@ -1,0 +1,14 @@
+#plexi doorschijnend
+KERNEL=="ttyACM*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0010", ATTRS{serial}=="6493534333335140B1D2", SYMLINK+="ttyUM1", RUN+="/usr/bin/umattach.sh"
+
+#plexi mat
+KERNEL=="ttyACM*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0010", ATTRS{serial}=="7523233343535180F1B1", SYMLINK+="ttyUM2", RUN+="/usr/bin/umattach.sh"
+
+#euromaker
+KERNEL=="ttyACM*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0010", ATTRS{serial}=="741333535373519081B1", SYMLINK+="ttyUM3", RUN+="/usr/bin/umattach.sh"
+
+#oranje
+KERNEL=="ttyACM*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0010", ATTRS{serial}=="A413637303735160B1D1", SYMLINK+="ttyUM4", RUN+="/usr/bin/umattach.sh"
+
+#blauw
+KERNEL=="ttyACM*", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0010", ATTRS{serial}=="7523233343535180D080", SYMLINK+="ttyUM5", RUN+="/usr/bin/umattach.sh"

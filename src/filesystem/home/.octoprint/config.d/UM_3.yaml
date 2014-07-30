@@ -32,7 +32,7 @@ serial:
   - /dev/Huxy*
   autoconnect: true
   baudrate: 250000
-  port: /dev/tty.UM_3
+  port: /dev/ttyUM3
   timeout: {}
 server:
   firstRun: false
