@@ -1,0 +1,55 @@
+accessControl:
+  enabled: false
+api:
+  key: FF8A51E6863048B5B53BF72B7D4F53BC
+appearance:
+  color: blue
+  name: Euromaker
+controls:
+- children:
+  - command: M106 S%(speed)s
+    input:
+    - default: 200
+      name: Speed (0-255)
+      parameter: speed
+    name: Start Fan
+    type: parametric_command
+  - command: M106 S0
+    name: Stop Fan
+    type: command
+  name: Fan Control
+  type: section
+feature:
+  swallowOkAfterResend: false
+printerParameters:
+  movementSpeed:
+    e: 600
+    x: 12000
+    y: 12000
+    z: 150
+serial:
+  additionalPorts:
+  - /dev/Huxy*
+  autoconnect: true
+  baudrate: 250000
+  port: /dev/tty.UM_3
+  timeout: {}
+server:
+  firstRun: false
+  host: 0.0.0.0
+  port: 5003
+system:
+  actions:
+  - action: shutdown
+    command: sudo shutdown -h now
+    confirm: You are about to shutdown the system.
+    name: Shutdown Huxy Pi
+temperature:
+  profiles:
+  - bed: 0
+    extruder: 250
+    name: ABS
+  - bed: 0
+    extruder: 220
+    name: PLA
+webcam: {}

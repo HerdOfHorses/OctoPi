@@ -1,0 +1,54 @@
+accessControl:
+  enabled: false
+api:
+  key: 831FF9207DA64D9E848E886B2639F895
+appearance:
+  name: Plexi-doorsch.
+controls:
+- children:
+  - command: M106 S%(speed)s
+    input:
+    - default: 200
+      name: Speed (0-255)
+      parameter: speed
+    name: Start Fan
+    type: parametric_command
+  - command: M106 S0
+    name: Stop Fan
+    type: command
+  name: Fan Control
+  type: section
+feature:
+  swallowOkAfterResend: false
+printerParameters:
+  movementSpeed:
+    e: 600
+    x: 12000
+    y: 12000
+    z: 150
+serial:
+  additionalPorts:
+  - /dev/Huxy*
+  autoconnect: true
+  baudrate: 250000
+  port: /dev/tty.UM_1
+  timeout: {}
+server:
+  firstRun: false
+  host: 0.0.0.0
+  port: 5001
+system:
+  actions:
+  - action: shutdown
+    command: sudo shutdown -h now
+    confirm: You are about to shutdown the system.
+    name: Shutdown Huxy Pi
+temperature:
+  profiles:
+  - bed: 110
+    extruder: 250
+    name: ABS
+  - bed: 70
+    extruder: 220
+    name: PLA
+webcam: {}

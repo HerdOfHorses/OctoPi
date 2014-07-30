@@ -1,0 +1,18 @@
+#!/bin/bash
+OCTOPRINT_HOME=$HOME/OctoPrint
+VIRTUALENV_HOME=$HOME/oprint
+OCTO_CONFS=$HOME/.octoprint/config.d
+
+# start the webui
+#$VIRTUALENV_HOME/bin/python $OCTOPRINT_HOME/run --port 9999 -c ~/.octoprint/config_dev.yaml
+
+#$VIRTUALENV_HOME/bin/python $OCTOPRINT_HOME/run --port 5001 -c ~/.octoprint/Huxy1.yaml
+#$VIRTUALENV_HOME/bin/python $OCTOPRINT_HOME/run --port 5002 -c ~/.octoprint/Huxy2.yaml &
+#$VIRTUALENV_HOME/bin/python $OCTOPRINT_HOME/run --port 5001 -c ~/.octoprint/Huxy1.yaml
+
+for config in $( ls $OCTO_CONFS/*.yaml )
+do
+	echo -n "starting octoprint $config"
+	$VIRTUALENV_HOME/bin/python $OCTOPRINT_HOME/run -c $config > /dev/null 1<&2 &
+	echo ": PID $!"
+done
