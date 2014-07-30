@@ -5,7 +5,7 @@ set -x
 # Written by Guy Sheffer <guysoft at gmail dot com>
 # GPL V3
 
-OCTOPI_PATH=$(dirname $(realpath -s $0))
+OCTOPI_PATH=$(pwd)
 source $OCTOPI_PATH/config
 
 fixLd(){
@@ -13,18 +13,18 @@ fixLd(){
 }
 
 unpackHome(){
-  chown -hR pi /filesystem/home
-  chgrp -hR pi /filesystem/home
-  cp -av /filesystem/home/* /home/pi
-  cp -av /filesystem/home/.* /home/pi
+  chown -hR pi $OCTOPI_PATH/filesystem/home
+  chgrp -hR pi $OCTOPI_PATH/filesystem/home
+  cp -av $OCTOPI_PATH/filesystem/home/* /home/pi
+  cp -av $OCTOPI_PATH/filesystem/home/.* /home/pi
 }
 
 unpackRoot(){
-  cp -av /filesystem/root/* /
+  cp -av $OCTOPI_PATH/filesystem/root/* /
 }
 
 unpackBoot(){
-  cp -av /filesystem/boot/* /boot
+  cp -av $OCTOPI_PATH/filesystem/boot/* /boot
 }
 
 fixLd
