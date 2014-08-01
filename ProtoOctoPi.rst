@@ -44,6 +44,10 @@ Belangrijke bestanden
 ``/etc/haproxy/haproxy.conf``
     haproxy configuratie file
 
+``/usr/bin/umattach.sh``
+    Script dat wordt uitgevoerd bij inpluggen / verwijderen van een (in 30-octoprint.rules bekende) printer.
+    Dit kan gebruikt worden als printer 'hotplug' hook.
+
 Aanpassen van bestanden
 -----------------------
 
