@@ -55,6 +55,7 @@ De mapping is als volgt::
     /boot -> /home/pi/OctoPi/src/filesystem/boot/
 
 Om de verandering ook upstream door te voeren::
+
     git add *
     git commit -m 'commit message'
     git push
