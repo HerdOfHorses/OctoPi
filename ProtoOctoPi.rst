@@ -43,3 +43,21 @@ Belangrijke bestanden
 
 ``/etc/haproxy/haproxy.conf``
     haproxy configuratie file
+
+Aanpassen van bestanden
+-----------------------
+
+Als je een bestand hebt aangepast kopieer het dan terug naar de juiste locatie in ``/home/pi/OctoPi/src/filesystem/``.
+De mapping is als volgt::
+
+    / -> /home/pi/OctoPi/src/filesystem/root/
+    /home/pi -> /home/pi/OctoPi/src/filesystem/home/
+    /boot -> /home/pi/OctoPi/src/filesystem/boot/
+
+Om de verandering ook upstream door te voeren::
+    git add *
+    git commit -m 'commit message'
+    git push
+
+
+
