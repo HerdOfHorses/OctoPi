@@ -29,7 +29,7 @@ printerParameters:
     z: 150
 serial:
   additionalPorts:
-  - /dev/Huxy*
+  - /dev/ttyUM*
   autoconnect: true
   baudrate: 250000
   port: /dev/ttyUM5

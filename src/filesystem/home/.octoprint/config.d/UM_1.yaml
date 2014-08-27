@@ -18,6 +18,7 @@ controls:
     type: command
   name: Fan Control
   type: section
+cura: {}
 feature:
   swallowOkAfterResend: false
 printerParameters:
@@ -28,7 +29,7 @@ printerParameters:
     z: 150
 serial:
   additionalPorts:
-  - /dev/Huxy*
+  - /dev/ttyUM*
   autoconnect: true
   baudrate: 250000
   port: /dev/ttyUM1
